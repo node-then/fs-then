@@ -14,7 +14,7 @@ assert = buster.assertions.assert;
 refute = buster.assertions.refute;
 fail = buster.assertions.fail;
 
-whitelist = require('../method-whitelist.json');
+whitelist = require('../lib/method-whitelist.json');
 
 function onWhiteList(name) {
 	return whitelist.indexOf(name) >= 0;

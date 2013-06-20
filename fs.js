@@ -11,40 +11,7 @@ fs = require('fs');
 nodefn = require('when/node/function');
 slice = Array.prototype.slice.call.bind(Array.prototype.slice);
 
-whitelist = [
-	'appendFile',
-	'chmod',
-	'chown',
-	'close',
-	'exists',
-	'fchmod',
-	'fchown',
-	'fdatasync',
-	'fstat',
-	'fsync',
-	'ftruncate',
-	'futimes',
-	'lchmod',
-	'lchown',
-	'link',
-	'lstat',
-	'mkdir',
-	'open',
-	'read',
-	'readFile',
-	'readdir',
-	'readlink',
-	'realpath',
-	'rename',
-	'rmdir',
-	'stat',
-	'symlink',
-	'truncate',
-	'unlink',
-	'utimes',
-	'write',
-	'writeFile'
-];
+whitelist = require('./method-whitelist.json');
 
 module.exports = promised = {};
 

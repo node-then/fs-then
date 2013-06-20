@@ -5,10 +5,9 @@
  * @author Scott Andrews
  */
 
-var fs, when, nodefn, promised, slice, whitelist;
+var fs, nodefn, promised, slice, whitelist;
 
 fs = require('fs');
-when = require('when');
 nodefn = require('when/node/function');
 slice = Array.prototype.slice.call.bind(Array.prototype.slice);
 
@@ -56,8 +55,7 @@ function promisify(method) {
 		if (typeof args[args.length - 1] === 'function') {
 			callback = args.pop();
 			promise = nodefn.apply(method, args);
-			// should the returned promise be chained from the callback?
-			promise.then(function (value) { return callback(null, value); }, callback);
+			promise.then(function (value) { callback(null, value); }, callback);
 		}
 		else {
 			promise = nodefn.apply(method, args);

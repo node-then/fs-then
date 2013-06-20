@@ -5,7 +5,7 @@ fs Then
 
 Thin wrapper arround Node's fs module that makes the async functions promise
 aware. The wrapped methods return a promise the represents the value of the
-async operation. Traditional callback still work, allowing for a transparent
+async operation. Traditional callbacks still work, allowing for a transparent
 drop-in for fs. Sync methods, classes and other helpers are not modified.
 
 
@@ -16,7 +16,7 @@ Traditional Async
 
 ```javascript
 var fs = require('fs-then');
-fs.readFile('path to file', funciton (err, buffer) {
+fs.readFile('path to file', function (err, buffer) {
    ...
 });
 ```

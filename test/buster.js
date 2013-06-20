@@ -8,7 +8,5 @@
 exports.node = {
 	environment: 'node',
 	rootPath: '../',
-	tests: [
-		'test/**/*-test.js'
-	]
+	tests: [ 'test/**/*-test.js' ]
 };

@@ -1,7 +1,7 @@
 fs Then
 =======
 
-[![Build Status](https://travis-ci.org/scothis/fs-then.png)](https://travis-ci.org/scothis/fs-then)
+[![Build Status](https://travis-ci.org/node-then/fs-then.png)](https://travis-ci.org/node-then/fs-then)
 
 Thin wrapper arround Node's fs module that makes the async functions promise
 aware. The wrapped methods return a promise the represents the value of the

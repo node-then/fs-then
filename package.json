@@ -1,8 +1,8 @@
 {
 	"name": "fs-then",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "Promise aware wrapper for Node's fs module",
-	"keywords": ["fs", "then", "promises", "when.js", "cujojs"],
+	"keywords": ["fs", "node-then", "promises", "when.js", "cujojs"],
 	"licenses": [
 		{
 			"type": "MIT",
@@ -12,19 +12,20 @@
 	"maintainers": [
 		{
 			"name": "Scott Andrews",
-			"email": "sandrews@gopivotal.com",
+			"email": "scothis@gmail.com",
 			"web": "http://twitter.com/scothis"
 		}
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/scothis/fs-then.git"
+		"url": "https://github.com/node-then/fs-then.git"
 	},
 	"dependencies": {
-		"when": "~2.1"
+		"node-then": "~0.1"
 	},
 	"devDependencies": {
-		"buster": ""
+		"test-support": "~0.3",
+		"when": "~2.2"
 	},
 	"main": "./lib/fs",
 	"scripts": {

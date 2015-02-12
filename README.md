@@ -12,10 +12,10 @@ drop-in for fs. Sync methods, classes and other helpers are not modified.
 Example
 -------
 
-Traditional Async
+Traditional Callback
 
 ```javascript
-var fs = require('fs-then');
+var fs = require('fs');
 fs.readFile('path to file', function (err, buffer) {
    ...
 });
@@ -25,7 +25,10 @@ With Promises
 
 ```javascript
 var fs = require('fs-then');
-fs.readFile('path to file').then(...);
+fs.readFile('path to file').then(
+   function (buffer) { ... },
+   function (err) { ... }
+);
 ```
 
 
